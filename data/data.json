@@ -1,0 +1,31 @@
+{
+	"index": {
+		"audio": [
+			{
+				"slug": "readaloud01.m4a",
+				"title": "On The Hyper Real",
+				"author": "Alex Verman",
+				"date": "",
+				"url": "https://alexverman.substack.com/p/on-the-hyper-real",
+				"review": ""
+			},
+			{
+				"slug": "readaloud02.m4a",
+				"title": "Article 2",
+				"author": "Author 2",
+				"date": "",
+				"url": "https://addieis.online",
+				"review": ""
+			}
+		],
+		"mediaElementOptions": {
+			"stretching": "responsive"
+		}
+	},
+	"about": {
+
+	},
+	"otherPage": {
+
+	}
+}

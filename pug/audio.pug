@@ -1,0 +1,12 @@
+- const o = htmlWebpackPlugin.options.data
+main
+  each item, index in o.audio.reverse()
+    .audio-container
+      h1
+        a(href=item.url)= item.title
+      h2= item.author
+      audio.mejs__player(
+        id= "audio-" + index
+        src= "../assets/audio/" + item.slug
+        data-mejsoptions= o.mediaElementOptions
+      )

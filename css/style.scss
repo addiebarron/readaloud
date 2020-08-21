@@ -1,0 +1,51 @@
+@import 'mediaelement/build/mediaelementplayer.css';
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: black;
+	}
+}
+
+body,html {
+	margin: 0;
+}
+
+body {
+	font-family: 'PT Mono', monospace;
+	color: #222;
+}
+
+header {
+	height: 60px;
+	padding: 20px;
+	background: #fffafe;
+	border-bottom: dotted 1px gray;
+	img.icon {
+		padding-right: 10px;
+	}
+	.right {
+		float: right;
+	}
+	.left {
+		float: left;
+	}
+}
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px;
+	.audio-container {
+		flex: 1;
+		margin: auto;
+		padding-bottom: 60px;
+		width: 800px;
+		max-width: 100%;
+	}
+}
