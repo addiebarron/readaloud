@@ -9,7 +9,7 @@ const htmlPlugins = (pageTitles) => {
   return pageTitles.map(title => { 
     return new HTMLWebpackPlugin({
       title,
-      filename: `${(title != 'index' ? title + '/' : '') + title}.html`,
+      filename: `${(title != 'index' ? title + '/' : '')}index.html`,
       template: `./pug/${title.toLowerCase()}.pug`,
       data: pageData[title]
     });
@@ -31,11 +31,6 @@ module.exports = {
       // both options are optional
       filename: '[name].css',
       chunkFilename: '[id].css',
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'assets', to: 'assets' }
-      ]
     })
 	],
 
@@ -45,6 +40,15 @@ module.exports = {
         test: /\.pug$/, 
         use: ["pug-loader"]
     	},
+
+      {
+        test: /\.(png|jpe?g|gif|m(p3|4a))$/i,
+        loader: "file-loader",
+        options: {
+          outputPath: "assets",
+          esModule: false
+        }
+      },
 
       { 
         test: /\.css$/, 
